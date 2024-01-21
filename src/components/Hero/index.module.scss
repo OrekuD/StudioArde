@@ -1,0 +1,66 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  .title {
+    font-size: 30rem;
+    white-space: nowrap;
+    font-weight: 200;
+    margin-left: 10rem;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
+
+  .image {
+    height: 30rem;
+    object-fit: contain;
+  }
+
+  .image-1,
+  .image-2,
+  .image-3,
+  .image-4 {
+    position: absolute;
+    object-fit: contain;
+    width: 275px;
+    height: 275px;
+  }
+
+  .image-1 {
+    top: 140px;
+    left: -200px;
+  }
+
+  .image-2 {
+    top: 140px;
+    right: -200px;
+  }
+
+  .image-3 {
+    bottom: 25%;
+    left: 360px;
+  }
+
+  .image-4 {
+    bottom: 0;
+    right: 350px;
+  }
+}
