@@ -1,3 +1,4 @@
+import React from "react";
 import Hero from "../../components/Hero";
 import classes from "./index.module.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -24,32 +25,37 @@ const favoriteProjects = [
 ];
 
 export default function Home() {
+  const projectsContainerRef = React.useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
+  const { scrollYProgress } = useScroll({
+    target: projectsContainerRef,
+    offset: ["start end", "end start"], // [start, end] or [end, start] start of the container at the end of the window and bottom of the container at the top of the window
+  });
+
+  React.useEffect(() => {
+    scrollYProgress.on("change", (e) => console.log(e));
+  }, [scrollYProgress]);
 
   const sectionOneTitleOneOpacity = useTransform(
     scrollY,
     [window.innerHeight * 0.5, window.innerHeight],
-    [0, 1]
+    [0, 1],
   );
 
   const sectionOneTitleTwoOpacity = useTransform(
     scrollY,
     [window.innerHeight, window.innerHeight * 1.5],
-    [0, 1]
+    [0, 1],
   );
 
-  const favoriteProjectsTitleTranslateY = useTransform(
-    scrollY,
-    [
-      window.innerHeight * 2.5,
-      window.innerHeight * 2.5 + window.innerHeight * 3,
-    ],
-    [0, window.innerHeight * 3],
-    {
-      //   clamp: false,
-    }
-    // [0, -800]
-  );
+  // const favoriteProjectsTitleTranslateY = useTransform(
+  //   scrollY,
+  //   [
+  //     window.innerHeight * 2.5,
+  //     window.innerHeight * 2.5 + window.innerHeight * 3,
+  //   ],
+  //   [0, window.innerHeight * 3],
+  // );
 
   return (
     <>
@@ -93,18 +99,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={classes["projects"]}>
-        <motion.p
-          className={classes["section-title"]}
-          style={{
-            translateY: favoriteProjectsTitleTranslateY,
-            // translateX: favoriteProjectsTitleTranslateY,
-          }}
+      <div className={classes["projects"]} ref={projectsContainerRef}>
+        <p
+          className={`${classes["section-title"]} ${classes["our-favorite-projects"]}`}
         >
           Our favorite
           <br />
           projects
-        </motion.p>
+        </p>
         {favoriteProjects.map((image, index) => (
           <img
             src={image}

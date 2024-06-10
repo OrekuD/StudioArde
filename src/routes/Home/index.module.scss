@@ -1,124 +1,131 @@
 .section-title {
-  font-size: 7rem;
-  font-weight: 200;
-  text-wrap: balance;
+    font-size: 7rem;
+    font-weight: 200;
+    text-wrap: balance;
 
-  span {
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 0.65rem;
-  }
+    span {
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 0.65rem;
+    }
+}
+
+.our-favorite-projects {
+    position: sticky;
+    top: 50vh;
 }
 
 .section-description {
-  font-size: 1.3rem;
+    font-size: 1.3rem;
 }
 
 .section-one {
-  padding: 2rem 8rem;
-  min-height: 100vh;
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 7rem;
+    padding: 2rem 8rem;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7rem;
 
-  .section-description {
-    align-self: flex-end;
-  }
-
-  .details {
-    padding: 10rem 0 0 20rem;
-
-    .row {
-      display: flex;
-      gap: 3rem;
-      margin-top: 7rem;
-
-      .section-description {
-        width: 380px;
-        //   background-color: red;
-      }
+    .section-description {
+        align-self: flex-end;
     }
-  }
+
+    .details {
+        padding: 10rem 0 0 20rem;
+
+        .row {
+            display: flex;
+            gap: 3rem;
+            margin-top: 7rem;
+
+            .section-description {
+                width: 380px;
+                //   background-color: red;
+            }
+        }
+    }
 }
 
 .projects {
-  position: relative;
-  height: 303vh;
-  padding-top: 70vh;
-  //   padding-bottom: 203vh;
-  overflow: hidden;
-  isolation: isolate;
-  //   background-color: red;
+    position: relative;
+    height: 303vh;
+    padding-top: 70vh;
+    //   padding-bottom: 203vh;
+    /* overflow: hidden; */
+    isolation: isolate;
+    //   background-color: red;
 
-  .section-title {
-    text-align: center;
-    font-family: "PPNeuemontreal";
-    font-size: 9rem;
-    font-weight: 400;
-  }
+    .section-title {
+        position: sticky;
+        top: 0;
+        text-align: center;
+        font-family: "PPNeuemontreal";
+        font-size: 9rem;
+        font-weight: 400;
+    }
 
-  img {
-    position: absolute;
-    object-fit: contain;
-    width: 285px;
-    height: 285px;
-    z-index: -1;
-  }
+    img {
+        position: absolute;
+        object-fit: contain;
+        width: 285px;
+        height: 285px;
+        z-index: -1;
+    }
 
-  .image-1 {
-    right: 230px;
-    top: 95.5vh;
-  }
+    .image-1 {
+        right: 230px;
+        top: 95.5vh;
+    }
 
-  .image-2 {
-    left: 330px;
-    top: 115vh;
-  }
+    .image-2 {
+        left: 330px;
+        top: 115vh;
+    }
 
-  .image-3 {
-    left: -90px;
-    top: 120vh;
-  }
+    .image-3 {
+        left: -90px;
+        top: 120vh;
+    }
 
-  .image-4 {
-    right: 300px;
-    top: 160vh;
-  }
+    .image-4 {
+        right: 300px;
+        top: 160vh;
+    }
 
-  .image-5 {
-    right: -100px;
-    top: 175vh;
-  }
+    .image-5 {
+        right: -100px;
+        top: 175vh;
+    }
 
-  .image-6 {
-    left: 70px;
-    top: 180vh;
-  }
+    .image-6 {
+        left: 70px;
+        top: 180vh;
+    }
 
-  .image-7 {
-    right: 40vw;
-    top: 203vh;
-  }
+    .image-7 {
+        right: 40vw;
+        top: 203vh;
+    }
 
-  .image-8 {
-    left: -20px;
-    top: 233vh;
-  }
+    .image-8 {
+        left: -20px;
+        top: 233vh;
+    }
 
-  .image-9 {
-    right: -20px;
-    top: 233vh;
-  }
+    .image-9 {
+        right: -20px;
+        top: 233vh;
+    }
 
-  .image-10 {
-    left: 40vw;
-    top: 253vh;
-  }
+    .image-10 {
+        left: 40vw;
+        top: 253vh;
+    }
 
-  .image-11 {
-    right: 200px;
-    top: 277vh;
-  }
+    .image-11 {
+        right: 200px;
+        top: 277vh;
+    }
 }
