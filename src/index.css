@@ -1,42 +1,48 @@
 :root {
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {
-  font-family: "PPNeuemontreal";
-  src: url("../public/fonts/ppneuemontreal-book.otf") format("opentype");
-  font-weight: 400;
+    font-family: "PPNeuemontreal";
+    src: url("../public/fonts/ppneuemontreal-book.otf") format("opentype");
+    font-weight: 400;
 }
 
 @font-face {
-  font-family: "PPNeuemontreal";
-  src: url("../public/fonts/ppneuemontreal-medium.otf") format("opentype");
-  font-weight: 500;
+    font-family: "PPNeuemontreal";
+    src: url("../public/fonts/ppneuemontreal-medium.otf") format("opentype");
+    font-weight: 500;
 }
 
 @font-face {
-  font-family: "PPNeuemontreal";
-  src: url("../public/fonts/ppneuemontreal-thin.otf") format("opentype");
-  font-weight: 200;
+    font-family: "PPNeuemontreal";
+    src: url("../public/fonts/ppneuemontreal-thin.otf") format("opentype");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "Airif";
+    src: url("../public/fonts/airif-body.otf") format("opentype");
+    font-weight: 400;
 }
 
 * {
-  font-family: "PPNeuemontreal";
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    font-family: "PPNeuemontreal";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  background-color: #000;
-  color: #fff;
-  cursor: none;
+    background-color: #000;
+    color: #fff;
+    cursor: none;
 }
 
 button {
-  all: unset;
+    all: unset;
 }

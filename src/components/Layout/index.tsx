@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import classes from "./index.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
@@ -83,7 +83,63 @@ export default function Layout() {
                 ease: "easeInOut",
               },
             }}
-          ></motion.div>
+          >
+            <div className={classes["inner-container"]}>
+              <div className={classes["links"]}>
+                <div className={classes["column"]}>
+                  <Link to="/">
+                    <p className={classes["link"]}>Home</p>
+                  </Link>
+                  <Link to="/">
+                    <p className={classes["link"]}>Services</p>
+                  </Link>
+                </div>
+                <div className={classes["column"]}>
+                  <Link to="/">
+                    <p className={classes["link"]}>Work</p>
+                  </Link>
+                  <Link to="/">
+                    <p className={classes["link"]}>Learn</p>
+                  </Link>
+                </div>
+                <div className={classes["column"]}>
+                  <Link to="/">
+                    <p className={classes["link"]}>About</p>
+                  </Link>
+                  <Link to="/">
+                    <p className={classes["link"]}>Contact</p>
+                  </Link>
+                </div>
+              </div>
+              <div className={classes["links"]}>
+                <div className={classes["row"]}>
+                  <Link to="/">
+                    <p className={classes["link"]}>Work with us</p>
+                  </Link>
+                  <Link to="/">
+                    <p className={classes["link"]}>Newsletter</p>
+                  </Link>
+                  <Link to="/">
+                    <p className={classes["link"]}>Blog</p>
+                  </Link>
+                  <Link to="/">
+                    <p className={classes["link"]}>Press</p>
+                  </Link>
+                </div>
+                <div className={classes["row"]}>
+                  <Link to="/">
+                    <p className={classes["link"]}>Pinterest</p>
+                  </Link>
+                  <Link to="/">
+                    <p className={classes["link"]}>LinkedIn</p>
+                  </Link>
+                  <Link to="/">
+                    <p className={classes["link"]}>Instagram</p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
       <Outlet />

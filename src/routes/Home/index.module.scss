@@ -1,3 +1,6 @@
+@import "../../scss/media-query";
+@import "../../scss/dimensions";
+
 .section-title {
     font-size: 7rem;
     font-weight: 200;
@@ -8,11 +11,6 @@
         text-decoration-thickness: 3px;
         text-underline-offset: 0.65rem;
     }
-}
-
-.our-favorite-projects {
-    position: sticky;
-    top: 50vh;
 }
 
 .section-description {
@@ -42,28 +40,33 @@
 
             .section-description {
                 width: 380px;
-                //   background-color: red;
             }
         }
     }
 }
 
 .projects {
-    position: relative;
+    /* position: relative; */
+    width: 100%;
     height: 303vh;
-    padding-top: 70vh;
-    //   padding-bottom: 203vh;
-    /* overflow: hidden; */
-    isolation: isolate;
-    //   background-color: red;
+    padding-top: 600px;
+    /* isolation: isolate; */
 
     .section-title {
         position: sticky;
-        top: 0;
+        top: 50vh;
+        transform: translateY(-50%);
         text-align: center;
-        font-family: "PPNeuemontreal";
         font-size: 9rem;
         font-weight: 400;
+    }
+
+    .images-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        isolation: isolate;
+        overflow-x: hidden;
     }
 
     img {
@@ -75,7 +78,7 @@
     }
 
     .image-1 {
-        right: 230px;
+        right: 10vw;
         top: 95.5vh;
     }
 
@@ -127,5 +130,182 @@
     .image-11 {
         right: 200px;
         top: 277vh;
+    }
+
+    @include extra-extra-extra-large-devices-up {
+        img {
+            width: 375px;
+            height: 375px;
+        }
+
+        .image-1 {
+            right: 14vw;
+        }
+
+        .image-2 {
+            left: 25vw;
+        }
+
+        .image-3 {
+            left: -90px;
+        }
+
+        .image-4 {
+            right: 20vw;
+        }
+
+        .image-5 {
+            right: -100px;
+        }
+
+        .image-6 {
+            left: 70px;
+        }
+
+        .image-7 {
+            right: 40vw;
+        }
+
+        .image-8 {
+            left: -20px;
+        }
+
+        .image-9 {
+            right: -20px;
+        }
+
+        .image-10 {
+            left: 40vw;
+        }
+
+        .image-11 {
+            right: 10vw;
+        }
+    }
+}
+
+.outer-wrapper {
+    width: 100%;
+
+    .wrapper {
+        width: 100%;
+        max-width: $max-width;
+        margin: 0 auto;
+    }
+}
+
+.brand-strategy-description {
+    margin-top: 50rem;
+    display: flex;
+    gap: 10rem;
+
+    .row {
+        display: flex;
+        gap: 4rem;
+    }
+
+    .section-title {
+        font-size: 4.5rem;
+        font-weight: 400;
+    }
+}
+
+.list {
+    margin-top: 16rem;
+    isolation: isolate;
+
+    .item {
+        position: relative;
+        /* display: inline-block; */
+        width: fit-content;
+
+        p {
+            font-size: 11rem;
+            font-family: "Noto Serif", serif;
+            font-weight: 100;
+
+            &:hover {
+                text-decoration: underline;
+                text-decoration-thickness: 5px;
+                text-underline-offset: 0.8rem;
+            }
+        }
+
+        .image {
+            position: absolute;
+            right: 10rem;
+            top: -60%;
+            transform: translateX(100%);
+            width: 360px;
+            height: 280px;
+            background: red;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            z-index: -1;
+        }
+
+        &:hover {
+            .image {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.core-values-container {
+    margin: 20rem 0 20rem 0;
+
+    .section-title {
+        text-align: right;
+        font-size: 4rem;
+        font-weight: 400;
+        max-width: 1000px;
+        margin: 0 0 10rem auto;
+
+        span {
+            text-underline-offset: 0.3rem;
+            text-decoration-thickness: 0.1rem;
+        }
+    }
+
+    .core-values {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .core-value {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            width: 100%;
+            max-width: 500px;
+
+            .menu-button {
+                margin-top: 1rem;
+
+                svg {
+                    transition: transform 0.3s ease-in-out;
+                }
+            }
+
+            .col {
+                .label {
+                    font-size: 3rem;
+                    margin-bottom: 3rem;
+                }
+
+                .grid-container {
+                    display: grid;
+                    grid-template-rows: 0fr;
+                    overflow: hidden;
+                    transition: grid-template-rows 0.7s
+                        cubic-bezier(0.16, 1, 0.32, 1);
+
+                    .inner {
+                        min-height: 0;
+                    }
+                }
+            }
+        }
     }
 }
