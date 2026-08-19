@@ -4,10 +4,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import Cursor from "../Cursor";
 import useCursorStore from "../../store/cursorStore";
+import useScrollLock from "../../hooks/useScrollLock";
 
 export default function Layout() {
   const [showMenu, setShowMenu] = React.useState(false);
   const cursorState = useCursorStore();
+  useScrollLock(showMenu);
 
   return (
     <>

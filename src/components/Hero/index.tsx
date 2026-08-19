@@ -1,10 +1,4 @@
-import {
-  cubicBezier,
-  easeIn,
-  motion,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import classes from "./index.module.scss";
 
 interface Props {

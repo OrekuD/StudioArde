@@ -41,6 +41,7 @@ body {
     background-color: #000;
     color: #fff;
     cursor: none;
+    scrollbar-gutter: stable;
 }
 
 button {

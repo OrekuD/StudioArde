@@ -5,58 +5,56 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import useCursorStore from "../../store/cursorStore";
 
 const heroImages = [
-  "https://ctkgvpacra.cloudimg.io/_base_/images/projects/Lieblings-Projekte-Studio-Arde-13.png?w=350&org_if_sml=1&ar=1",
-  "https://ctkgvpacra.cloudimg.io/_base_/images/projects/Lieblings-Projekte-Studio-Arde-12.png?w=350&org_if_sml=1&ar=1",
-  "https://ctkgvpacra.cloudimg.io/_base_/images/projects/Lieblings-Projekte-Studio-Arde-20.png?w=350&org_if_sml=1&ar=1",
-  "https://ctkgvpacra.cloudimg.io/_base_/images/projects/Lieblings-Projekte-Studio-Arde-16.png?w=350&org_if_sml=1&ar=1",
+  "https://wsrv.nl/?url=https://assets.studio-arde.com/images/projects/Studio_Arde_LieblingsProjekte_5.jpg&w=500",
+  "https://wsrv.nl/?url=https://assets.studio-arde.com/images/projects/Lieblings-Projekte-Studio-Arde-20.png&w=500",
+  "https://wsrv.nl/?url=https://assets.studio-arde.com/images/projects/Studio_Arde_LieblingsProjekte_10.jpg&w=500",
+  "https://wsrv.nl/?url=https://assets.studio-arde.com/images/projects/Lieblings-Projekte-Studio-Arde-4.png&w=500",
 ];
 
 const favoriteProjects = [
-  "https://ctkgvpacra.cloudimg.io/_base_/images/projects/Lieblings-Projekte-Studio-Arde-4.png?w=350&org_if_sml=1&ar=1",
-  "https://ctkgvpacra.cloudimg.io/_base_/images/projects/Lieblings-Projekte-Studio-Arde-5.png?w=350&org_if_sml=1&ar=1",
-  "https://ctkgvpacra.cloudimg.io/_base_/images/projects/Lieblings-Projekte-Studio-Arde-9.png?w=350&org_if_sml=1&ar=1",
-  "https://ctkgvpacra.cloudimg.io/_base_/images/projects/Lieblings-Projekte-Studio-Arde-3.png?w=350&org_if_sml=1&ar=1",
-  "https://ctkgvpacra.cloudimg.io/_base_/images/projects/Lieblings-Projekte-Studio-Arde-8.png?w=350&org_if_sml=1&ar=1",
-  "https://ctkgvpacra.cloudimg.io/_base_/images/projects/Lieblings-Projekte-Studio-Arde-11.png?w=350&org_if_sml=1&ar=1",
-  "https://ctkgvpacra.cloudimg.io/_base_/images/projects/Lieblings-Projekte-Studio-Arde-10.png?w=350&org_if_sml=1&ar=1",
-  "https://ctkgvpacra.cloudimg.io/_base_/images/projects/Lieblings-Projekte-Studio-Arde-6.png?w=350&org_if_sml=1&ar=1",
-  "https://ctkgvpacra.cloudimg.io/_base_/images/projects/Lieblings-Projekte-Studio-Arde-1.png?w=350&org_if_sml=1&ar=1",
-  "https://ctkgvpacra.cloudimg.io/_base_/images/projects/Lieblings-Projekte-Studio-Arde-2.png?w=350&org_if_sml=1&ar=1",
-  "https://ctkgvpacra.cloudimg.io/_base_/images/projects/Lieblings-Projekte-Studio-Arde-7.png?w=350&org_if_sml=1&ar=1",
+  "https://wsrv.nl/?url=https://assets.studio-arde.com/images/projects/Lieblings-Projekte-Studio-Arde-10.png&w=350",
+  "https://wsrv.nl/?url=https://assets.studio-arde.com/images/projects/Lieblings-Projekte-Studio-Arde-5.png&w=350",
+  "https://wsrv.nl/?url=https://assets.studio-arde.com/images/projects/Lieblings-Projekte-Studio-Arde-02-Katharina-Bauer.png&w=350",
+  "https://wsrv.nl/?url=https://assets.studio-arde.com/images/projects/Studio_Arde_LieblingsProjekte_2.jpg&w=350",
+  "https://wsrv.nl/?url=https://assets.studio-arde.com/images/projects/Lieblings-Projekte-Studio-Arde-3.png&w=350",
+  "https://wsrv.nl/?url=https://assets.studio-arde.com/images/projects/Studio_Arde_LieblingsProjekte_11.jpg&w=350",
+  "https://wsrv.nl/?url=https://assets.studio-arde.com/images/projects/Studio_Arde_LieblingsProjekte_15.jpg&w=350",
+  "https://wsrv.nl/?url=https://assets.studio-arde.com/images/projects/Studio_Arde_LieblingsProjekte_12.jpg&w=350",
+  "https://wsrv.nl/?url=https://assets.studio-arde.com/images/projects/Studio_Arde_LieblingsProjekte_5.jpg&w=350",
+  "https://wsrv.nl/?url=https://assets.studio-arde.com/images/projects/Lieblings-Projekte-Studio-Arde-17.png&w=350",
+  "https://wsrv.nl/?url=https://assets.studio-arde.com/images/projects/Studio_Arde_LieblingsProjekte_9.jpg&w=350",
 ];
 
 const brandStrategy = [
   {
     label: "Brand Strategy",
     color: "red",
+    image:
+      "https://assets.studio-arde.com/images/services/brand-strategy.jpg",
   },
   {
     label: "Brand Design",
     color: "red",
+    image:
+      "https://assets.studio-arde.com/images/services/branddesign.jpg",
   },
   {
-    label: "Visual Identity",
+    label: "Web Design",
     color: "red",
-  },
-  {
-    label: "Web Design​",
-    color: "red",
+    image:
+      "https://assets.studio-arde.com/images/services/websitedesign.jpg",
   },
   {
     label: "Web Development",
     color: "red",
+    image:
+      "https://assets.studio-arde.com/images/services/webdevelopment.jpg",
   },
   {
     label: "Collateral",
     color: "red",
-  },
-  {
-    label: "Branded Spaces",
-    color: "red",
-  },
-  {
-    label: "Brand Mentoring",
-    color: "red",
+    image:
+      "https://assets.studio-arde.com/images/services/collateral.jpg",
   },
 ];
 
@@ -91,13 +89,13 @@ export default function Home() {
   const sectionOneTitleOneOpacity = useTransform(
     scrollY,
     [window.innerHeight * 0.5, window.innerHeight],
-    [0, 1],
+    [0, 1]
   );
 
   const sectionOneTitleTwoOpacity = useTransform(
     scrollY,
     [window.innerHeight, window.innerHeight * 1.5],
-    [0, 1],
+    [0, 1]
   );
 
   return (
@@ -185,11 +183,14 @@ export default function Home() {
             </div>
           </div>
           <div className={classes["list"]}>
-            {brandStrategy.map(({ label }) => {
+            {brandStrategy.map(({ label, image }) => {
               return (
                 <div key={label} className={classes["item"]}>
                   <p>{label}</p>
-                  <div className={classes["image"]} />
+                  <div
+                    className={classes["image"]}
+                    style={{ backgroundImage: `url(${image})` }}
+                  />
                 </div>
               );
             })}
@@ -209,7 +210,7 @@ export default function Home() {
                       onClick={() => {
                         if (isSelected) {
                           setSelectedCoreValuesIndexes((prevValues) =>
-                            prevValues.filter((_index) => _index !== index),
+                            prevValues.filter((_index) => _index !== index)
                           );
                         } else {
                           setSelectedCoreValuesIndexes((prevValues) => [

@@ -213,6 +213,7 @@
 .list {
     margin-top: 16rem;
     isolation: isolate;
+    overflow-x: hidden;
 
     .item {
         position: relative;
@@ -238,7 +239,8 @@
             transform: translateX(100%);
             width: 360px;
             height: 280px;
-            background: red;
+            background-size: cover;
+            background-position: center;
             opacity: 0;
             transition: opacity 0.4s ease-in-out;
             z-index: -1;
