@@ -19,7 +19,7 @@ export default function Cursor() {
     window.addEventListener("mousemove", onMouseMove);
 
     return () => window.removeEventListener("mousemove", onMouseMove);
-  }, []);
+  }, [mouse.x, mouse.y]);
 
   return (
     <motion.div
